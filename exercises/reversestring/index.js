@@ -7,12 +7,9 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str) {
-  let reversed = ""
-
-  for (char of str) {
-    reversed = char + reversed;
-  }
-  return reversed
+  //reduce takes in 2 args, an arrow func and the starting initial arg
+  //whenever reduce runs it's going to take in the starting arg an pass it into the arr func as the first arg.
+  return str.split("").reduce((rev, char) => char + rev, '')
 }
 
 module.exports = reverse;
@@ -24,4 +21,14 @@ module.exports = reverse;
 //   // let reversed = strArr.reverse().join("");
 //   // return reversed;
 //   return str.split("").reverse().join("");
+// }
+
+//Second solution
+// function reverse(str) {
+//   let reversed = ""
+//
+//   for (char of str) {
+//     reversed = char + reversed;
+//   }
+//   return reversed
 // }
