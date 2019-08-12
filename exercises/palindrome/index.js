@@ -17,6 +17,7 @@ function palindrome(str){
 	return str === reversed
 };
 
+// soltion 2 if interview asks to not use reversed
 function palindrome(str){
 	let reversed = "";
 	for(char of str){
@@ -27,6 +28,17 @@ function palindrome(str){
 	}else{
 		return false
     }
+};
+
+
+// solution 3 not the best solution
+// uses .every()
+// not the best because it goes thru the array twice
+
+function palindrome(str){
+	return str.split('').every((char, i)=> {
+		return char === str[str.length - i - 1]
+	})
 };
 
 module.exports = palindrome;
