@@ -20,19 +20,15 @@
 //4. use the .include helper method to check if the chars in str a
 //   are the same as str b.
 //5. return true or false based on step 3
+
+//time complexity O(logn)
 function anagrams(stringA, stringB) {
   let newStringA = stringA.toLowerCase().replace(/[ .,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split("").sort().join("");
   let newStringB = stringB.toLowerCase().replace(/[ .,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split("").sort().join("");
-
-  console.log(newStringA)
-  console.log(newStringB)
-
   if (newStringA.length !== newStringB.length) {
     return false
   }
-
   return newStringA === newStringB;
-
 }
 
 module.exports = anagrams;
