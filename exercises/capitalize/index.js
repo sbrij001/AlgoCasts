@@ -14,15 +14,13 @@
 
 // 1. split the string into an arr
 // 2. map thru the arr and capitalize each word in the array
-//    use the slice method to break apart word 
+//    use the slice method to break apart word
 // 3. join array to turn it back into a string.
 // 4. return newly capitalized string.
-
+// time complexity is linear because it needs to go thru every element.
 function capitalize(str) {
-  let arrOfWords = str.split(" ").map((word) => {
-    return word[0].toUpperCase() + word.slice(1)
-  })
+  let arrOfWords = str.split(" ").map(word =>  word[0].toUpperCase() + word.slice(1))
   return arrOfWords.join(" ");
-}
+};
 
 module.exports = capitalize;
