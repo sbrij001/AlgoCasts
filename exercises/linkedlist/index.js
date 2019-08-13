@@ -22,6 +22,7 @@ class LinkedList {
     // can be simplified to
     // this.head = new Node(data, this.head)
   }
+
   size(){
     let counter = 0;
     let node = this.head
@@ -31,6 +32,24 @@ class LinkedList {
       node = node.next
     }
     return counter;
+  }
+
+  getFirst(){
+    return this.head
+  }
+
+  getLast(){
+    let node = this.head
+    if (!this.head) {
+      return null
+    }
+    while (node) {
+      if (!node.next) {
+        node = node
+      }
+      node = node.next
+    }
+    return node
   }
 }
 
