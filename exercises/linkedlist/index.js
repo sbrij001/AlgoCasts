@@ -7,8 +7,6 @@ class Node {
     this.data = data;
     this.next = next;
   }
-
-
 }
 
 class LinkedList {
@@ -39,18 +37,23 @@ class LinkedList {
   }
 
   getLast(){
-    let node = this.head
+    let node = this.head;
     if (!this.head) {
       return null
     }
+
     while (node) {
       if (!node.next) {
-        node = node
+        return node
       }
       node = node.next
     }
-    return node
   }
-}
+
+  clear(){
+    this.head = null;
+  }
+
+};
 
 module.exports = { Node, LinkedList };
