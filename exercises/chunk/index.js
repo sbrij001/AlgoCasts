@@ -8,6 +8,31 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+// given 2 args, an arr and n
+// create a for loop where the length is = second arg
+// return 1 arr with n amount of subarrays
+
+// 1. create a an arr (chunked) to return
+// 2. loop thru the arr in the first arg
+// 3. retrieve the last element in the chunked array
+// 4. if the last ele is undefined or if the length of it is
+//    equal to chunk size, push a new chunk into chunked
+//    with he current ele.
+// 4. else add the current ele to the chunk
+
+function chunk(array, size) {
+  const chunked = [];
+
+  for(let num of array){
+    let last = chunked[chunked.length -1];
+    
+    if (!last || last.length === size) {
+      chunked.push([num])
+    }else {
+      last.push(num)
+    }
+  }
+  return chunked;
+};
 
 module.exports = chunk;
