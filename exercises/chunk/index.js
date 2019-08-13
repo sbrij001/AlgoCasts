@@ -19,13 +19,13 @@
 //    equal to chunk size, push a new chunk into chunked
 //    with he current ele.
 // 4. else add the current ele to the chunk
-
+// time complexity => linear
 function chunk(array, size) {
   const chunked = [];
 
   for(let num of array){
     let last = chunked[chunked.length -1];
-    
+
     if (!last || last.length === size) {
       chunked.push([num])
     }else {
