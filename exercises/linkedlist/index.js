@@ -96,6 +96,57 @@ class LinkedList {
     }
   }
 
+  // will return a node at the provided index.
+  getAt(index){
+    const node = this.head;
+    const counter = 0;
+    while (node) {
+      if (counter === index) {
+        return node
+      }
+      counter ++;
+      node = node.next;
+    }
+    // the the case an index is requested that is outside of the linked list.
+    return null;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
 
 module.exports = { Node, LinkedList };
