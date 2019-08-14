@@ -72,7 +72,6 @@ class LinkedList {
       return;
 
     }
-
     let previous = this.head;
     let node = this.head.next;
 
@@ -80,7 +79,21 @@ class LinkedList {
       previous = node;
       node = node.next;
     }
+    // once while loop finishes running
+    // set previous.next to null to remove.
     previous.next = null;
+  }
+
+  insertLast(data){
+    let lastNode = this.getLast();
+
+    if (last) {
+      // there are some existing nodes in our chain.
+      last.next = new Node(data);
+    }else {
+      // the chain is empty
+      this.head = new Node(data);
+    }
   }
 
 };
