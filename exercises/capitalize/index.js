@@ -19,7 +19,7 @@
 // 4. return newly capitalized string.
 // time complexity is linear because it needs to go thru every element.
 function capitalize(str) {
-  let arrOfWords = str.split(" ").map(word =>  word[0].toUpperCase() + word.slice(1))
+  let arrOfWords = str.split(" ").map(word => word[0].toUpperCase() + word.slice(1))
   return arrOfWords.join(" ");
 };
 

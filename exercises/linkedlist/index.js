@@ -65,10 +65,12 @@ class LinkedList {
 
   removeLast(){
     if (!this.head) {
-      return null
+      return;
     }
     if(!this.head.next){
-      return this.head = null;
+      this.head = null;
+      return;
+
     }
 
     let previous = this.head;
