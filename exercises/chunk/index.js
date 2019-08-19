@@ -8,9 +8,6 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-// given 2 args, an arr and n
-// create a for loop where the length is = second arg
-// return 1 arr with n amount of subarrays
 
 // 1. create a an arr (chunked) to return
 // 2. loop thru the arr in the first arg
