@@ -207,11 +207,29 @@ class SinglyLinkedLists {
   }
 
 
-
-
-
-
-
+  // reverse will return a reversed version of the linked list.
+  // swap the head the tail
+  // create a var called next & previous
+  // create a variable called node and initalize it to the head property
+  // loop thru the list
+  // set the next var to be the next property on whatever the node is
+  // set the next property on the node to be whatever property is
+  // set the previous to be the value of the node variable
+  // set the node variable to be the value of the next variable
+  reverse(){
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = this.head;
+    let previous = null;
+    let next;
+    while (this.head) {
+      next = node.next;
+      node.next = previous;
+      previous = node;
+      node = next;
+    }
+    return this;
+  }
 
 
 
