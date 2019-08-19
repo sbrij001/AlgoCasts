@@ -120,7 +120,6 @@ class SinglyLinkedLists {
   //     count++
   //   }
   // }
-
   get(index){
     if (index < 0 || index >= this.length) return null;
     let count = 0;
@@ -131,5 +130,52 @@ class SinglyLinkedLists {
     }
     return current;
   }
+
+  // set will change the value of a node based on it's position in the linked list.
+  // the function will accept a index and a value
+  // use the get func to find the node
+  // if the node is not found return false
+
+  // if the node is found set the value of that node
+  // to be the value passed to the function and return true
+  set(index,value){
+    let foundNode = get(index);
+    if (foundNode) {
+      foundNode.value = value;
+      return true
+    }
+    return false;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
