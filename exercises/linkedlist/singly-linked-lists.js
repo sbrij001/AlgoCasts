@@ -59,3 +59,22 @@ pop(){
   }
   return current;
 }
+
+// removes a node from the begining of a linked list
+// if there are no nodes return undefined
+// store the current head property in a variable
+// update the head property to be the current heads next property
+// decrament the length by 1
+// return the value of the node that was removed
+shift(){
+  if(!this.head) return undefined;
+
+  let currentHead = this.head;
+  this.head = this.head.next;
+  this.length--
+  if (this.length === 0) {
+    this.head = null;
+    this.tail = null;
+  }
+  return currentHead;
+}
