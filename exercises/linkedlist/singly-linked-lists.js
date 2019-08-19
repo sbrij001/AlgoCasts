@@ -135,11 +135,10 @@ class SinglyLinkedLists {
   // the function will accept a index and a value
   // use the get func to find the node
   // if the node is not found return false
-
   // if the node is found set the value of that node
   // to be the value passed to the function and return true
   set(index,value){
-    let foundNode = get(index);
+    let foundNode = this.get(index);
     if (foundNode) {
       foundNode.value = value;
       return true
@@ -147,6 +146,38 @@ class SinglyLinkedLists {
     return false;
   }
 
+  // create an insert method that will add
+  // a node to the linked list at a specific position
+  // accepts 2 args an index and a value
+  // if the index < 0 or greater than the index return false
+  // if the index is the same as the length
+  // push a new node to the end of the list
+  // if the index is 0 unshift a new node to the start of the list.
+  // otherwise using the get method access the node at index minus 1 (to get the prev node)
+  // set the next property on the node to be the new node
+  // set the next property on the new node to be the previous next
+  // increment the length
+  // return true
+
+  insert(index, value){
+    let newNode = new Node(value);
+
+    if (index < 0 || index > this.length) return false;
+    if (index === this.length) {
+      this.push(value)
+      return true
+    }else if (index === 0){
+      this.unshift(value)
+      return true
+    }else {
+      let previous = get(index - 1);
+      let after = previous.next.next;
+      previous.next = newNode;
+      newNode.next = after;
+      this.length++;
+      return true;
+    }
+  }
 
 
 
