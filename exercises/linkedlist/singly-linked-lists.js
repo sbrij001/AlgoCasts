@@ -179,7 +179,32 @@ class SinglyLinkedLists {
     }
   }
 
+  // method remove => removes a node from a list at a specific position.
+  // function accepts an arg of an index
+  // if the index is less than 0 or greater than the length return null.
+  // if the index is the same as the length - 1 use pop
+  // if the index equal to 0 use shift
+  // otherwise using the get method access the node at index - 1
+  // set the next property on that node to be the next of the next node
+  // decrament the length by 1
+  // return the value of the removed node
 
+  remove(index){
+    if (index < 0 || index >= this.length) return null;
+
+    if (index === this.length - 1 ) {
+      this.pop()
+    } else if (index === 0) {
+      this.shift
+    } else {
+      let previous = this.get(index - 1);
+      let removed = previous.next;
+      let after = previous.next.next;
+      previous.next = after
+      this.length --
+      return removed;
+    }
+  }
 
 
 
