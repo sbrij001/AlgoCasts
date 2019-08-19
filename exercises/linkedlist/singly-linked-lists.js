@@ -32,3 +32,30 @@ class SinglyLinkedLists {
     return this;
   }
 }
+
+// pop will remove from the end of the linked lists
+// if there are no nodes in the list return undefined
+// loop thru the entire list until you reach the tail
+// set the next prop of the second to last node to be null
+// set the tail to be the second to last node
+// decrament the length of the list by 1
+// return the value of the node removed
+
+pop(){
+  if(!this.head) return undefined;
+
+  let current = this.head;
+  let previous =  this.head;
+  while(previous.next){
+    previous = current;
+    current = current.next
+  }
+  this.tail.next = null;
+  this.tail = previous;
+  this.length --;
+  if (this.length === 0) {
+    this.head = null;
+    this.tail = null;
+  }
+  return current;
+}
