@@ -17,13 +17,14 @@ class SinglyLinkedLists {
   // create a new node using the val passed in
   // if there is no head set the head and tail to be the new node
   // if there is a head set the next prop on the list to be a new node
-  // and set the tail prop on the list to be a newly created node.
+  // and set the tail prop on the list to be the newly created node.
   push(val){
     let newNode = new Node(val);
     if(!this.head){
       this.head = newNode;
       this.tail = newNode;
     }else {
+      //current tails next item will be the new node
       this.tail.next = newNode;
       this.tail = newNode;
       this.length += 1;
@@ -99,4 +100,36 @@ class SinglyLinkedLists {
     }
     this.length ++;
     return this;
+}
+
+  // get method retrieves a node by its position in the list
+  // takes an argument of a number
+  // returns the item at that index
+  // if the index is less than 0 or greater than
+  // or equal to the length of the list return null
+
+  // loop thru the list until u reach the index & return the node at the specific index
+
+  // get(index){
+  //   if (index < 0 || index >= this.length) return null;
+  //   let count = 0;
+  //   while(this.head){
+  //     if (count === index) {
+  //       return this;
+  //     }
+  //     count++
+  //   }
+  // }
+
+  get(index){
+    if (index < 0 || index >= this.length) return null;
+    let count = 0;
+    let current = this.head
+    if(count !== index){
+      current = this.head.next
+      count++
+    }
+    return current;
+  }
+
 }
