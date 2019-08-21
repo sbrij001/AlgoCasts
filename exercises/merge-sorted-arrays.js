@@ -15,9 +15,19 @@
 // use the sort method to sort the arrays
 // return merged and sorted array
 
-// time complexity is o(log n) where n is the total length of our output array. 
+// time complexity is o(log n) where n is the total length of our output array.
 function mergeArrays(array1, array2){
   let mergedArr = array1.concat(array2);
   let sortedArr = mergedArr.sort((a - b) => a - b);
   return sortedArr;
+}
+
+// create a var that save an array we want to return
+// save both heads of the array
+// We'll start at the beginnings of our input arrays, since the smallest elements will be there.
+// As we put items in our final mergedArray, we'll keep track of the fact that they're "already merged."
+At each step, each array has a first "not-yet-merged" item.
+At each step, the next item to put in the mergedArray is the smaller of those two "not-yet-merged" items!
+function mergeArrays(array1, array2){
+
 }
