@@ -10,4 +10,5 @@ function findNum(array, value){
       return i;
     }
   }
+  return -1
 };
