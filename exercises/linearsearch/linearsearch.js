@@ -6,9 +6,7 @@
 
 function findNum(array, value){
   for(let i = 0; - < array.length; i++){
-    if (array[i] === value) {
-      return i;
-    }
+    if (array[i] === value) return i;
   }
   return -1
 };
