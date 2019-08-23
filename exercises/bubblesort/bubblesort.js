@@ -5,9 +5,6 @@
 // return the sorted array
 
 function bubbleSort(arr){
-  const sorted = [];
-  let temp = 0;
-
   for( let i = arr.length; i > 0; i-- ){
     for(let j = 0; j < i - 1; i++){
       if(arr[j] > arr[j + 1]){
