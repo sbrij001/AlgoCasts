@@ -26,8 +26,8 @@ function mergeArrays(array1, array2){
 // save both heads of the array
 // We'll start at the beginnings of our input arrays, since the smallest elements will be there.
 // As we put items in our final mergedArray, we'll keep track of the fact that they're "already merged."
-At each step, each array has a first "not-yet-merged" item.
-At each step, the next item to put in the mergedArray is the smaller of those two "not-yet-merged" items!
-function mergeArrays(array1, array2){
-
-}
+// At each step, each array has a first "not-yet-merged" item.
+// At each step, the next item to put in the mergedArray is the smaller of those two "not-yet-merged" items!
+// function mergeArrays(array1, array2){
+//
+// }
