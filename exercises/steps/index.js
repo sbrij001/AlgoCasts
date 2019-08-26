@@ -17,6 +17,25 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n){
+  const shape = [];
+  for(let i = 0; i <= n; i++) {
+    let spaces = (n - i)
+    shape.push("#" + numberOfSpaces(spaces))
+    console.log(shape)
+  }
+}
+
+function numberOfSpaces(n){
+  let numOfSpa = (n - 1);
+  const string = [];
+  let i = 0;
+  while(i < numOfSpa){
+    string.push(" ");
+    i++
+  }
+return string.join(" ")
+}
+
 
 module.exports = steps;
