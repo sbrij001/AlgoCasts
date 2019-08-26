@@ -17,6 +17,20 @@
 //       '### '
 //       '####'
 
+// function accepts the arg of a single int
+// log a step shape in the form of a string
+// the step has to have spaces on the right hand side
+
+// Psuedocode
+// Create the function that accepts n
+// Create a variable called shape that will be an array
+// Loop thru up until n
+// Add a # to shape
+// create a helper method that will loop thru n and add a space each time it iterates
+// Call helper function in steps 
+// Console log steps after we loop
+
+
 function steps(n){
   const shape = [];
   for(let i = 0; i <= n; i++) {
