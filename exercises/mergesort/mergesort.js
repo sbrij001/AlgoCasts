@@ -17,8 +17,8 @@ function mergeArrays(arr1, arr2){
   if (arr1.length === 0) {
       return arr2;
   }
-  if (arr1.length === 0) {
-      return arr2;
+  if (arr2.length === 0) {
+      return arr1;
   }
 
   while (arr) {
