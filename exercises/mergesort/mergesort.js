@@ -12,7 +12,6 @@ function mergeArrays(arr1, arr2){
   const merged = [];
   let i = 0;
   let j = 0;
-
   // base cases
   if (arr1.length === 0) {
       return arr2;
@@ -30,13 +29,14 @@ function mergeArrays(arr1, arr2){
       j++
     }
   }
-
+  //will push the results of the leftovers from the array that is not empty into merged
   while (i < arr1.length) {
     merged.push(arr1[i])
     i++
   }
   while (j < arr2.length) {
     merged.push(arr2[j])
+    j++
   }
   return results
 }
