@@ -40,3 +40,21 @@ function mergeArrays(arr1, arr2){
   }
   return results
 }
+
+// create a function called sort
+// split the array into smaller arrays
+// call mergesort on the smaller arrays to solve it recursively
+
+// pseudocode
+// 1. start with a base case
+// 2.split the array in half using slice
+// go thru one half of the array and call mergeSort
+// do the same for the other half
+// return result 
+
+function mergeSort(array){
+  // base case
+  if (array.length <= 1) {
+    return array
+  }
+}
