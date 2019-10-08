@@ -214,6 +214,7 @@ class SinglyLinkedLists {
   // loop thru the list
   // set the next var to be the next property on whatever the node is
   // set the next property on the node to be whatever property is
+
   // set the previous to be the value of the node variable
   // set the node variable to be the value of the next variable
   reverse(){
